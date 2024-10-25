@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmetic Store</title>
+  <!-- Bootstrap CSS (для швидкого макетування) -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffe4e1; /* Ніжно-рожевий фон */
+      color: #333;
+    }
+    .navbar {
+      background-color: #ffffff;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #ff69b4; /* Рожевий */
+    }
+    .product-card {
+      border: none;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .product-img {
+      max-height: 250px;
+      object-fit: contain;
+    }
+    .footer {
+      background-color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+      color: #000000;
+    }
+    .success-message {
+      color: green;
+      margin-top: 15px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">Cosmetic Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#products">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="jumbotron text-center" style="background-color: #ffe4e1; color: #010101;">
+    <h1>Welcome to the Cosmetic Store</h1>
+    <p>Discover the best cosmetics just for you!</p>
+    <a href="#products" class="btn btn-primary">Shop Now</a>
+  </div>
+
+  <!-- Products Section -->
+  <section id="products" class="container my-5">
+    <h2 class="text-center mb-5" style="color: #090206;">Our Products</h2>
+    <div class="row">
+      <!-- Product 1: Brush -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Makeup_brush.png" class="card-img-top product-img" alt="Makeup Brush">
+          <div class="card-body text-center">
+            <h5 class="card-title">Makeup Brush</h5>
+            <p class="card-text">A soft brush perfect for applying powder.</p>
+            <p><strong>Price: $10</strong></p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product 2: Mascara -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://www.pngplay.com/wp-content/uploads/12/Mascara-PNG-Clipart-Background.png" class="card-img-top product-img" alt="Mascara">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mascara</h5>
+            <p class="card-text">Get voluminous lashes with our mascara.</p>
+            <p><strong>Price: $15</strong></p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3: Lipstick -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://purepng.com/public/uploads/large/purepng.com-lipstickclothinglipstickfashion-objects-girl-makeup-stick-sexy-beauty-accessory-lipstick-lip-lips-cosmetics-631522935839vcyto.png" class="card-img-top product-img" alt="Lipstick">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lipstick</h5>
+            <p class="card-text">Bold, long-lasting lipstick shades.</p>
+            <p><strong>Price: $12</strong></p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container my-5">
+    <h2 class="text-center mb-5" style="color: #050304;">Contact Us</h2>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <p class="success-message" id="success-message">Your message has been sent successfully! We will contact you soon.</p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Cosmetic Store | All Rights Reserved</p>
+  </footer>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript for form submission -->
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      // Показати повідомлення про успішну відправку
+      document.getElementById("success-message").style.display = "block";
+      // Очистити поля форми
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    });
+  </script>
+</body>
+</html>
